@@ -6,7 +6,7 @@ const Home = () => {
     // console.log(card);
     return (
        <div>
-         <Banner></Banner>
+         <Banner card={card}></Banner>
     <Cards card={card}></Cards>
         </div>
     );

@@ -5,6 +5,8 @@ const Donation = () => {
     const[donation,setDonation]=useState([]);
     const[noFount,setFound]=useState("");
 
+    const [dataLength,setDataLength]=useState(4);
+
     useEffect(()=>{
     const donationItem=JSON.parse(localStorage.getItem('donation'));
     if(donationItem){
@@ -22,10 +24,17 @@ const Donation = () => {
             noFount?<p className="h-[80vh] flex justify-center items-center">{noFount}</p>:
             <div className="grid grid-cols-2">
               {
-                donation.map(cart=> <DonationCart key={cart.id} cart={cart}></DonationCart> )
+                donation.slice(0,dataLength).map(cart=> <DonationCart key={cart.id} cart={cart}></DonationCart> )
               }
+              
             </div>
-         }
+            
+         } 
+         <div className="flex justify-center mt-4">
+            <div className={dataLength===donation.length && 'hidden'}>
+         <button onClick={()=>setDataLength(donation.length)} className="btn btn-secondary ">Show All</button>
+         </div>
+         </div>
         </div>
     );
 };
