@@ -11,11 +11,11 @@ const Statistics = () => {
 
    },[])
    const x=statistics.length;
-       
+      //  console.log(x);
     const data = [
     
-        { name: 'Group A', value: 400 }, 
-        { name: 'Group B', value: 300 },
+        { name: 'Group A', value: x }, 
+        { name: 'Group B', value: 12-x },
        
       ];
       
@@ -37,7 +37,7 @@ const Statistics = () => {
 
           return (
          
-             <div className='flex justify-center'>
+             <div className='flex justify-center flex-col ml-24'>
                  <PieChart width={500} height={500}>
                 <Pie
                   data={data}
@@ -54,6 +54,9 @@ const Statistics = () => {
                   ))}
                 </Pie>
               </PieChart>
+              <div>
+               <img src='https://i.ibb.co/qFgjNND/Group-39500.png'/>
+              </div>
              </div>
     );
                   

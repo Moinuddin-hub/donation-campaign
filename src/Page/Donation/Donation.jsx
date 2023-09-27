@@ -22,7 +22,7 @@ const Donation = () => {
         <div>
          {
             noFount?<p className="h-[80vh] flex justify-center items-center">{noFount}</p>:
-            <div className="grid grid-cols-2">
+            <div className="grid grid-cols lg:grid-cols-2 md:grid-cols-2">
               {
                 donation.slice(0,dataLength).map(cart=> <DonationCart key={cart.id} cart={cart}></DonationCart> )
               }
