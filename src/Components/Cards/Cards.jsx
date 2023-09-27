@@ -4,7 +4,7 @@ import AllCarts from "./AllCarts";
 const Cards = ({card}) => {
   
 
-    console.log(card);
+    // console.log(card);
 
     return (
         <div className="mt-8">
